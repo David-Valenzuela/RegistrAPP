@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="primary" class="ion-text-center">
+    <h1>Iniciar Sesión</h1>
+  </ion-text>
+
+  <ion-grid fixed>
+  <ion-row>
+      <ion-col size="6" size-lg offset="2">
+        <ion-item>
+          <ion-label position="floating" ><ion-icon name="person-circle-outline"></ion-icon> Usuario:</ion-label>
+          <ion-input type="text" placeholder="Ricardo.M" #usuario></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6" size-lg offset="2">
+        <ion-item>
+          <ion-label position="floating"><ion-icon name="bag-outline"></ion-icon> Clave:</ion-label>
+          <ion-input type="password" placeholder="********" #clave></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button expand="block" shape="round" (click)="ingresar(usuario,clave)">
+      Ingresar
+  </ion-button>
+  
+</ion-content>
