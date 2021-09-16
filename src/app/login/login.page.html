@@ -16,17 +16,29 @@
           <ion-label position="floating" ><ion-icon name="person-circle-outline"></ion-icon> Usuario:</ion-label>
           <ion-input type="text" placeholder="Ricardo.M" #usuario></ion-input>
         </ion-item>
+        
+        <div *ngIf = "respuesta">
+          <ion-text color="danger" class="ion-text-center">
+            <p>{{respuesta}}</p>
+          </ion-text>
+        </div>
+      
       </ion-col>
       <ion-col size="6" size-lg offset="2">
         <ion-item>
           <ion-label position="floating"><ion-icon name="bag-outline"></ion-icon> Clave:</ion-label>
           <ion-input type="password" placeholder="********" #clave></ion-input>
         </ion-item>
+        <div *ngIf = "respuesta">
+          <ion-text color="danger" class="ion-text-center">
+            <p>{{respuesta}}</p>
+          </ion-text>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>
   <ion-button expand="block" shape="round" (click)="ingresar(usuario,clave)">
       Ingresar
   </ion-button>
-  
+
 </ion-content>
