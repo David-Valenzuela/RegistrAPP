@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,13 @@ import { Router} from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  usuario : String;
-  clave : String;
-  respuesta: String;
-  constructor(private router: Router) { 
-    this.usuario = "Juan";
-    this.clave = "juanduoc2021";
+  usuarios = [];
+  respuesta : String;
+  estado : Boolean;
+  id : Number;
+  constructor(
+    private usuariosService : UsuariosService,
+    private router: Router) { 
   }
 
   ngOnInit() {
@@ -20,14 +22,22 @@ export class LoginPage implements OnInit {
   
   ingresar(user : HTMLInputElement, pass : HTMLInputElement)
   {
-    let nombre = user.value
-    let password = pass.value
-    if(nombre == this.usuario && password == this.clave){
-      console.log("Datos Correctos")
-      this.router.navigate(['/home']);
-    } else{
-      console.log("Datos Incorrectos")
-      this.respuesta = "Ingrese nuevamente los datos."
+    this.estado = false;
+    let usuario = user.value;
+    let password = pass.value;
+    this.usuarios = this.usuariosService.getUsuarios();
+    for (let persona of this.usuarios)
+    {
+      if(persona.username == usuario && persona.clave == password){
+        this.estado = true;
+        this.id = persona.id;
+      }
+    } 
+    if(this.estado == true){
+      console.log("Datos Correctos", this.id);
+    }else{
+      console.log("Datos Incorrectos");
+      this.respuesta = "Ingrese nuevamente los datos.";
     }
   }
 
