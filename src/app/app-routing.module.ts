@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'menu',
+    path: ':id',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
 ];

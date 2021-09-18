@@ -34,7 +34,9 @@ export class LoginPage implements OnInit {
       }
     } 
     if(this.estado == true){
-      console.log("Datos Correctos", this.id);
+      console.log("Datos Correctos");
+      this.router.navigate(['/', this.id]);
+
     }else{
       console.log("Datos Incorrectos");
       this.respuesta = "Ingrese nuevamente los datos.";
