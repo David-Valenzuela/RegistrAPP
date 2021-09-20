@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="medium">
     <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +9,7 @@
     <br>
     <img src="assets/img/man-user.png" alt="usuario" width="50px">
     <ion-text color="light" class="ion-text-center">
-      <h1>Duoc UC</h1>
+      <h1>RegistrAPP</h1>
     </ion-text>
   </div>
 
@@ -22,9 +22,9 @@
             <ion-input style="font-size: 15pt" type="text" placeholder="Ricardo.M" #usuario></ion-input>
           </ion-item>
           
-          <div *ngIf = "respuesta">
+          <div *ngIf = "error">
             <ion-text color="warning">
-              <p style="font-size: 13pt;">{{respuesta}}</p>
+              <p style="font-size: 13pt;">{{error}}</p>
             </ion-text>
           </div>
         </ion-col>
@@ -35,9 +35,9 @@
             <ion-label style="font-size: 15pt" position="floating"><ion-icon name="bag-outline"></ion-icon> Clave:</ion-label>
             <ion-input style="font-size: 15pt" type="password" placeholder="********" #clave></ion-input>
           </ion-item>
-          <div *ngIf = "respuesta">
+          <div *ngIf = "error">
             <ion-text color="warning">
-              <p style="font-size: 13pt;">{{respuesta}}</p>
+              <p style="font-size: 13pt;">{{error}}</p>
             </ion-text>
           </div>
         </ion-col>

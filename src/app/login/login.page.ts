@@ -9,7 +9,7 @@ import { UsuariosService } from '../usuarios.service';
 })
 export class LoginPage implements OnInit {
   usuarios = [];
-  respuesta : String;
+  error : String;
   estado : Boolean;
   id : Number;
   constructor(
@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
 
     }else{
       console.log("Datos Incorrectos");
-      this.respuesta = "Ingrese nuevamente los datos.";
+      this.error = "Datos incorrectos, ingreselo nuevamente.";
     }
   }
 
