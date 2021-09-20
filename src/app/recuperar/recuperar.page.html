@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar Clave</ion-title>
+    <ion-buttons slot= "start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen] = "true">
+
+  <ion-card id="container">
+    <strong>¿Olvidaste tu contraseña?</strong>
+    <p>Ingresar nombre de usuario</p>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size=12>
+          <ion-item>
+            <ion-label position="floating"> Usuario </ion-label>
+            <ion-input #nombre placeholder="Ej: anto.mendez"></ion-input>
+          </ion-item>
+        </ion-col> 
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">  
+          <ion-button (click)="recuperar(nombre)" fill="outline" shape="round"> 
+            Recuperar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <div *ngIf="error;">
+        <ion-row>
+          <ion-col size="12">
+            <strong> {{error}}</strong>
+          </ion-col>  
+        </ion-row>
+      </div>
+
+    </ion-grid>
+
+
+  </ion-card>
+
+</ion-content>
