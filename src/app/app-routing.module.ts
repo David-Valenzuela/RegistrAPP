@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: ':id',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },  {
+    path: 'agregar',
+    loadChildren: () => import('./agregar/agregar.module').then( m => m.AgregarPageModule)
   },
+
 ];
 
 @NgModule({
