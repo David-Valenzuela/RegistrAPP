@@ -8,33 +8,15 @@
 </ion-header>
 
 <ion-content color="medium" >
+  <div class="ion-text-center">
+    <img id="duoc" src="assets/img/duocuc.png" alt="duoc-uc" >
+    <ion-text color="light">
+      <h1>Bienvenido/a : {{usuario.nombre | titlecase}} {{usuario.paterno | titlecase}}</h1>
+    </ion-text>
+  </div>
+  <br><br>
+  <ion-button class="button" expand="block" color="success" shape="round" (click)="ver()">Registrar Asistencia</ion-button>
   <br>
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col size="12">
-        <div class="ion-text-center">
-          <img src="assets/img/duocuc.png" alt="duoc-uc" width="200px" >
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12">
-        <ion-text color="light" class="ion-text-center">
-          <h1> Bienvenido/a:</h1>
-        </ion-text>
-       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="12">
-        <ion-text color="light" class="ion-text-center">
-          <h3>{{usuario.nombre | titlecase}} {{usuario.apellido | titlecase}}</h3>
-        </ion-text>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-<br><br>
-<ion-button  style="margin: 10px;" expand="block" color="success" shape="round" (click)="ver()">Registrar Asistencia</ion-button>
-<br>
-<ion-button  style="margin: 10px;" expand="block" color="success" shape="round" (click)="ver()">Historial de Asistencia</ion-button>
+  <ion-button class="button" expand="block" color="success" shape="round" (click)="ver()">Historial de Asistencia</ion-button>
 </ion-content>
 

@@ -10,14 +10,16 @@ export class UsuariosService {
     {
       id  : 1,
       nombre  : "Juan",
-      apellido  : "Lopez",
+      paterno  : "Lopez",
+      materno   : "Villena",
       username  : "juan.lopez",
       clave     : "juanduoc2021"
     },
     {
       id  : 2,
       nombre  : "Antonia",
-      apellido  : "Mendez",
+      paterno  : "Mendez",
+      materno   : "Ruz",
       username  : "anto.mendez",
       clave     : "antoniaduoc2021"
     },
