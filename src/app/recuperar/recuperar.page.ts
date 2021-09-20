@@ -35,7 +35,7 @@ export class RecuperarPage implements OnInit {
     } else {
       const alerta = await this.alertControl.create({
         header  : "Recuperar clave",
-        message : "Su clave es:" + this.contrasena,
+        message : "Su clave es: " + this.contrasena,
         buttons : [
           {
             text : "Aceptar",
