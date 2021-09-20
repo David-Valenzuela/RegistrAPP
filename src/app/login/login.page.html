@@ -9,7 +9,7 @@
     <br>
     <img src="assets/img/man-user.png" alt="usuario" width="50px">
     <ion-text color="light" class="ion-text-center">
-      <h1>Iniciar Sesión</h1>
+      <h1>Duoc UC</h1>
     </ion-text>
   </div>
 
@@ -23,20 +23,20 @@
           </ion-item>
           
           <div *ngIf = "respuesta">
-            <ion-text color="warning" class="ion-text-center">
+            <ion-text color="warning">
               <p style="font-size: 13pt;">{{respuesta}}</p>
             </ion-text>
           </div>
         </ion-col>
       </ion-row>
-      <ion-row class="ion-text-center">
+      <ion-row>
         <ion-col size="6" size-lg offset="3" >
           <ion-item color="medium">
             <ion-label style="font-size: 15pt" position="floating"><ion-icon name="bag-outline"></ion-icon> Clave:</ion-label>
             <ion-input style="font-size: 15pt" type="password" placeholder="********" #clave></ion-input>
           </ion-item>
           <div *ngIf = "respuesta">
-            <ion-text color="warning" class="ion-text-center">
+            <ion-text color="warning">
               <p style="font-size: 13pt;">{{respuesta}}</p>
             </ion-text>
           </div>
