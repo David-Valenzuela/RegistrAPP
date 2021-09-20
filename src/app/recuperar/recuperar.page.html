@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="medium">
     <ion-title>Recuperar Clave</ion-title>
     <ion-buttons slot= "start">
       <ion-back-button defaultHref="login"></ion-back-button>
@@ -7,38 +7,39 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen] = "true">
-
-  <ion-card id="container">
-    <strong>¿Olvidaste tu contraseña?</strong>
-    <p>Ingresar nombre de usuario</p>
-    <ion-grid fixed>
-      <ion-row>
-        <ion-col size=12>
-          <ion-item>
-            <ion-label position="floating"> Usuario </ion-label>
-            <ion-input #nombre placeholder="Ej: anto.mendez"></ion-input>
-          </ion-item>
-        </ion-col> 
-      </ion-row>
-      <ion-row>
-        <ion-col size="12">  
-          <ion-button (click)="recuperar(nombre)" fill="outline" shape="round"> 
-            Recuperar
-          </ion-button>
-        </ion-col>
-      </ion-row>
-      <div *ngIf="error;">
+<ion-content [fullscreen] = "true" color="medium">
+  <div class="ion-text-center">
+    <h1>Duoc UC</h1>
+    <ion-card id="container" color="medium">
+      <br> <br>
+      <strong>¿Olvidaste tu contraseña?</strong>
+      <ion-grid fixed>
         <ion-row>
-          <ion-col size="12">
-            <strong> {{error}}</strong>
-          </ion-col>  
+          <ion-col size=12>
+            <ion-item color="medium">
+              <ion-label position="floating"> Usuario </ion-label>
+              <ion-input #nombre placeholder="Ingresar Nombre De Usuario"></ion-input>
+            </ion-item>
+          </ion-col> 
         </ion-row>
-      </div>
+        <ion-row>
+          <ion-col size="12">  
+            <ion-button (click)="recuperar(nombre)" fill="solid" shape="round"> 
+              Recuperar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <div *ngIf="error;">
+          <ion-row>
+            <ion-col size="12">
+              <strong> {{error}}</strong>
+            </ion-col>  
+          </ion-row>
+        </div>
 
-    </ion-grid>
+      </ion-grid>
 
 
-  </ion-card>
-
+    </ion-card>
+  </div>
 </ion-content>
