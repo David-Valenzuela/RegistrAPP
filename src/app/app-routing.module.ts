@@ -21,11 +21,12 @@ const routes: Routes = [
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
   {
-    path: ':id',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  },  {
     path: 'agregar',
     loadChildren: () => import('./agregar/agregar.module').then( m => m.AgregarPageModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
 
 ];

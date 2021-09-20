@@ -50,4 +50,9 @@
   <ion-button style="margin: 15px;" expand="block" shape="round" [routerLink] = "['/recuperar']">
     Recuperar Clave
   </ion-button>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" type="button" (click)="agregar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

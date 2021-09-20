@@ -43,4 +43,8 @@ export class LoginPage implements OnInit {
     }
   }
 
+  agregar(){
+    this.router.navigate(['/agregar'])
+  }
+
 }
