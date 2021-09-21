@@ -36,20 +36,20 @@
               </ion-item>
             </ion-col>
           </ion-row>
-          <div *ngif="error" class="ion-text-center">
-            <ion-text color="warming">
+          <div *ngIf="error" class="ion-text-center">
+            <ion-text color="warning">
               <h2><strong>
                 {{error}}
               </strong></h2>
             </ion-text>
           </div>
         </ion-grid>
-          <ion-button (click)="continuar(nombre,paterno,materno)" expand="block" shape="round">
-            Continuar
-          </ion-button>
+        <ion-button (click)="continuar(nombre,paterno,materno)" expand="block" shape="round">
+          Continuar
+        </ion-button>
       </ion-card-content>
     </ion-card>
-    <ion-card *ngif="username" color="medium">
+    <ion-card *ngIf="username" color="medium">
       <ion-card-content>
         <ion-item color="medium">
           <ion-label>Nombre de Usuario: </ion-label>
@@ -65,8 +65,8 @@
           </ion-text>
         </div>
       </ion-card-content>
-      <ion-button (click)="continuar(nombre,paterno,materno,usuario,clave)" expand="block" shape="round">
-        Continuar
+      <ion-button (click)="agregar(nombre,paterno,materno,usuario,clave)" expand="block" shape="round">
+        Registrar
       </ion-button>
     </ion-card>
   </div>
