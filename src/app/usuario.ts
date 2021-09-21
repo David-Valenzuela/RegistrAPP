@@ -1,7 +1,8 @@
 export interface Usuario {
     id       : Number,
     nombre   : String,
-    apellido : String,
+    paterno  : String,
+    materno  : String,
     username : String,
     clave    : String
 }

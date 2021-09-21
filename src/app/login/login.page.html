@@ -7,9 +7,9 @@
 <ion-content color="medium">
   <div class="ion-text-center">
     <br>
-    <img src="assets/img/man-user.png" alt="usuario" width="50px">
+    <img id="user" src="assets/img/man-user.png" alt="usuario">
     <ion-text color="light" class="ion-text-center">
-      <h1>RegistrAPP</h1>
+      <h1>RegistrApp</h1>
     </ion-text>
   </div>
 
@@ -18,8 +18,8 @@
       <ion-row>
         <ion-col size="6"  size-lg offset="3">
           <ion-item color="medium">
-            <ion-label style="font-size: 15pt" position="floating" ><ion-icon name="person-circle-outline"></ion-icon> Usuario:</ion-label>
-            <ion-input style="font-size: 15pt" type="text" placeholder="Ricardo.M" #usuario></ion-input>
+            <ion-label class="texto" position="floating" ><ion-icon name="person-circle-outline"></ion-icon> Usuario:</ion-label>
+            <ion-input class="texto" type="text" placeholder="Ricardo.M" #usuario></ion-input>
           </ion-item>
           
           <div *ngIf = "error">
@@ -32,8 +32,8 @@
       <ion-row>
         <ion-col size="6" size-lg offset="3" >
           <ion-item color="medium">
-            <ion-label style="font-size: 15pt" position="floating"><ion-icon name="bag-outline"></ion-icon> Clave:</ion-label>
-            <ion-input style="font-size: 15pt" type="password" placeholder="********" #clave></ion-input>
+            <ion-label class="texto" position="floating"><ion-icon name="bag-outline"></ion-icon> Clave:</ion-label>
+            <ion-input class="texto" type="password" placeholder="********" #clave></ion-input>
           </ion-item>
           <div *ngIf = "error">
             <ion-text color="warning">
@@ -44,10 +44,10 @@
       </ion-row>
     </ion-grid>
   </div>
-  <ion-button style="margin: 15px;" expand="block" shape="round" (click)="ingresar(usuario,clave)">
+  <ion-button class="button" expand="block" shape="round" (click)="ingresar(usuario,clave)">
     Ingresar
   </ion-button>
-  <ion-button style="margin: 15px;" expand="block" shape="round" [routerLink] = "['/recuperar']">
+  <ion-button class="button" expand="block" shape="round" [routerLink] = "['/recuperar']">
     Recuperar Clave
   </ion-button>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">

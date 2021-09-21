@@ -10,14 +10,16 @@ export class UsuariosService {
     {
       id  : 1,
       nombre  : "Juan",
-      apellido  : "Lopez",
+      paterno  : "Lopez",
+      materno   : "Villena",
       username  : "juan.lopez",
       clave     : "juanduoc2021"
     },
     {
       id  : 2,
       nombre  : "Antonia",
-      apellido  : "Mendez",
+      paterno  : "Mendez",
+      materno   : "Ruz",
       username  : "anto.mendez",
       clave     : "antoniaduoc2021"
     },
@@ -32,5 +34,16 @@ export class UsuariosService {
   getUsuario(id: number)
   {
     return this.usuarios.find(x => {return x.id == id});
+  }
+  addUsuario(nombre: string, paterno: string, materno: string, username : string, clave : string)
+  {
+    this.usuarios.push(
+      {id       : this.usuarios.length + 1,
+        nombre  : nombre,
+        paterno : paterno,
+        materno : materno,
+        username : username,
+        clave : clave        
+    })
   }
 }
